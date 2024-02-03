@@ -1,0 +1,75 @@
+.container {
+  position: relative;
+  top: 1.2rem;
+  height: 5rem;
+  z-index: 10; 
+
+}
+.authPage {
+  display: none;
+}
+
+.dropdown {
+  margin-left: -8rem;
+  padding: 2px 1rem;
+  width: 7.7rem;
+  background-color: #fff;
+  box-shadow: 0 0.8rem 5rem 2rem rgba(102, 102, 102, 0.1);
+  border-radius: 1rem;
+
+transition: all 0.4s 0.4s;
+
+}
+.dropdown:hover, button:hover + .dropdown{
+    visibility: visible;
+  opacity: 1;
+
+}
+.directionIcon {
+  color: rgb(223, 223, 223);
+  background-color: rgba(0, 0, 0, 0.627);
+  border-radius: 5px;
+  position: absolute;
+  margin: 1.4rem 0 0 -1rem;
+  width: 1rem;
+    transition: transform 0.2s ease-in-out;
+}
+.upDirection{
+  transform: rotate(180deg);
+}
+.signSuggest{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+ width: 5rem;
+ font-size: 12px;
+ margin-bottom: 4px;
+
+}
+
+.signSuggest svg{
+ width: 1.5rem;
+}
+.container img{
+  width: 2.2rem;
+  border-radius: 50%;
+}
+
+.accountImg{
+cursor: pointer;
+}
+
+.dropdown hr {
+  border: 1px solid #e7e7e7;
+
+}
+.user {
+  margin: 10px 0;
+  display: flex;
+}
+
+.user p {
+  font-weight: 600;
+  margin: 0.4rem 0 0 0.5rem;
+}

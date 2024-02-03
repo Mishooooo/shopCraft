@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  flex-wrap: wrap; /* Allow container names to wrap to the next line */
+  max-width: 100%; /* Ensure the container doesn't exceed its parent's width */
+}
+
+
+.container li {
+  display: flex;
+  align-items: center;
+    font-weight: 500; 
+       font-size: .8em;
+}
+
+.container,
+.container button {
+     cursor: pointer;
+
+text-transform: capitalize;
+ transition: 0.2s all linear ;
+}
+
+.container a:hover,
+.container button:hover{
+opacity: 0.6;
+}
+
+.container span{
+  margin-left: 5px;
+}
+
+
+
+.container svg {
+  width: 0.8rem;
+}
+.container a svg {
+  width: 1.2rem;
+}

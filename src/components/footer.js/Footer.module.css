@@ -1,0 +1,63 @@
+.footer {
+  background-color: #2c2f40;
+}
+
+.container {
+  padding: 1rem;
+  color: #c5c5c5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  justify-items: center;
+  font-size: 13px;
+}
+
+.container h5 {
+  font-size: 15px;
+}
+.container hr {
+  margin: 6px 0;
+}
+
+.socialMedia img {
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+.container div a,
+.mailInfo {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  transition: 0.3s ease;
+}
+
+.container div a:hover {
+  opacity: 0.7;
+}
+
+.container div a:active {
+  opacity: 0.6;
+}
+.container img,
+.container svg {
+  width: 1.2rem;
+  margin-right: 6px;
+}
+
+.portfalio,
+.sourceCode {
+  box-shadow: 0 0px 20px rgba(75, 75, 75, 0.15);
+  color: #dbd9d9;
+}
+
+.copyright {
+  text-align: center;
+  padding: 1rem;
+  color: #f0f0f0;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,36 @@
+.products {
+  width: calc(100% - 4rem);
+  margin: 15vh 2rem;
+  display: grid;
+  justify-items: center; 
+  grid-template-columns: repeat(4, 10fr);
+  gap: 1rem;
+}
+.first-products {
+  position: relative;
+  z-index: 2;
+  
+  margin-top: 40vh;
+
+}
+
+@media  (max-width: 768px) {
+  .products {
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  
+}
+
+@media screen and (min-width: 2200px) { 
+
+
+.first-products {
+  position: relative;
+  z-index: 2;
+  
+  margin-top: 50vh;
+
+}
+}

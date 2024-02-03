@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.productsToBuyContainer {
+  border-radius: 1rem;  
+  background-color: white;
+ padding-bottom: 1rem;
+  width: 74%;
+}
+.productList  {
+margin: 1rem 1.4rem;
+}
+
+.productList label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.productList span {
+ font-weight: 400;
+} 
+
+
+.container input {
+  width: 1rem; 
+  height: 1rem;
+  border: 2px solid orange;
+  appearance: none; 
+  border-radius: 3px; 
+  padding: 0.5rem; 
+  cursor: pointer; 
+}
+.container input:checked{
+    background-color:orange;
+}
+.container input:checked::before {
+  position: absolute;
+  content: '\2713'; /* Unicode checkmark character */
+  color: white;
+
+  margin: -9px 0 0 -5px   ;
+}
+
+@media (max-width: 768px) {
+.productList  {
+margin: .4rem 1rem;
+}
+
+.productList  {
+margin: 1rem 6px;
+}
+
+
+
+.container input {
+  border: 1px solid orange;
+
+  width: .5rem; 
+  height: .5rem;
+}
+}

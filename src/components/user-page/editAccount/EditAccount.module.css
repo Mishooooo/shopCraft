@@ -1,0 +1,59 @@
+.inputs {
+  display: grid;
+  gap: 2rem;
+  padding: 1rem;
+  grid-template-columns: repeat(2, 2fr);
+}
+
+.container svg {
+  cursor: pointer;
+  color: #b6b6b6;
+  width: 1.3rem;
+  transition: 0.2s all;
+}
+
+.container svg:hover {
+  width: 1.5rem;
+}
+
+.containerHeader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.containerHeader button svg {
+  color: rgb(246, 246, 246);
+  fill: rgb(246, 246, 246);
+  width: 1.3rem;
+}
+.containerHeader button svg:hover {
+  width: 1.3rem;
+}
+
+.container input {
+  width: 8rem;
+  padding: 0.5rem;
+  color: rgb(17, 17, 17);
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+
+.saveBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.saveBtn button {
+  height: 2rem;
+  width: 8rem;
+  background-color: orange;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}

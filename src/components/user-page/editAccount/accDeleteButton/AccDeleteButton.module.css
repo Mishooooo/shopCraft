@@ -1,0 +1,22 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+width: 13rem;
+height: 2rem;
+padding: 1.2rem 1rem;
+background-color: rgb(200, 200, 200);
+box-shadow: 3px 4px 5px rgb(209, 209, 209);
+color: rgb(244, 244, 244);
+font-size: 16px;
+border-radius: 5px;
+cursor: pointer;
+transition: .5s all;
+}
+
+
+.container:hover{
+color: white;
+background-color: rgb(219, 163, 157);
+}
+

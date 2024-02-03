@@ -1,0 +1,28 @@
+.userIcon {
+    width: 1rem;
+}
+.inputLabel {
+    display: flex;
+   font-weight: 600;
+   font-size: 15px;
+   margin: 7px 0 5px 0;
+}
+
+.inputLabel label{
+    text-transform: capitalize;
+margin-left: 2px;
+color: rgb(41, 41, 41);
+}
+
+.input {
+    position: relative;
+    padding: 0.7rem;
+    border: 1.5px solid #ccc;
+    border-radius: 10px;
+ margin-bottom: 7px;
+   width: calc(100% - 1.4rem);
+}
+
+.error {
+    color: rgb(163, 65, 65);
+}

@@ -1,0 +1,37 @@
+
+.container h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+.container li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+}
+.container input,
+.container label {
+          cursor: pointer; 
+
+}
+
+.container input {
+    margin-right: 12px;
+  width: 1rem; 
+  height: 1rem;
+  border: 2px solid orange;
+  appearance: none; 
+  border-radius: 3px; 
+  padding: 0.5rem; 
+}
+.container input:checked{
+    background-color:orange;
+}
+.container input:checked::before {
+  position: absolute;
+  content: '\2713'; /* Unicode checkmark character */
+  color: white;
+
+  margin: -9px 0 0 -5px   ;
+}

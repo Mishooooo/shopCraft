@@ -1,0 +1,72 @@
+.container {
+    background-color: white;
+    width: 35vh; 
+    height: 40vh; 
+    
+    padding: 3vh;
+    padding-top: 2vh;
+    border-radius: 2px;
+    box-shadow: 3px 5px rgba(186, 186, 186, 0.045);
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2vh;
+}
+
+.container h3 {
+   white-space: nowrap;
+    margin-bottom: .2rem;
+    font-weight: 600;
+    color: rgba(23, 22, 22, 0.815);
+        font-size: 1.4vw;
+}
+
+.categories li {
+        font-size: 1.1vw;
+
+    width: 17vh; 
+    height: 17vh; 
+}
+
+.categories li img {
+
+    width: 16vh; 
+    height: 15vh; 
+}
+
+@media screen and (min-width: 2200px) { 
+  .container {
+    background-color: white;
+    width: 25rem; 
+    height: 25rem; 
+    
+    padding: 1.5rem;
+
+}
+
+.categories {
+
+    gap: 2rem;
+}
+
+.container h3 {
+
+        font-size: 1em;
+}
+
+.categories li {
+        font-size: .8em;
+
+    width: 11rem; 
+    height: 11rem; 
+}
+
+.categories li img {
+
+    width: 100%; 
+    height: 10rem; 
+}
+
+}

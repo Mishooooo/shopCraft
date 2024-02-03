@@ -1,0 +1,44 @@
+ .error, .success {
+opacity: .7;
+margin-bottom: .3rem
+}
+
+.success {
+color: green
+}
+.error {
+color: red;
+margin-top: -1rem;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.039);  
+height: 6.5rem;
+
+ border-radius: 12px;
+ box-shadow: -1px  1px 8px #dadada90;
+    padding: 24px; 
+  margin: 3.5rem 0;
+}
+.container button {
+width: 8rem;
+background-color: rgba(15, 130, 15, 0.672);
+color: white;
+border-radius: 1rem;
+/* font-size: 20px; */
+height: 2.3rem;
+margin: 1rem;
+cursor: pointer;
+}
+
+.container input {
+    background-color: transparent;
+    color: rgb(28, 28, 28);
+    padding: .6rem;
+   border: none;
+    border-radius: 10px;
+    width: 8rem;
+    box-shadow: 1.5px 2px 5px rgb(144, 158, 145)
+
+}
+

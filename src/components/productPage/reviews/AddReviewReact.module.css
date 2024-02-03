@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    align-items: center;
+    width: 6rem;
+}
+
+.container svg {
+    width: 1.8rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.container svg:hover {
+
+    opacity: 0.6;
+    transform: scale(1.2); /* Optional: Add a slight scale effect on hover */
+}
+
+.liked {
+    fill: rgb(59, 59, 208);
+}
+
+
+
+.container span {
+    margin-left: 0.4rem;
+}

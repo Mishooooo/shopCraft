@@ -1,0 +1,68 @@
+.container {
+    margin: 1.5rem 0;
+}
+.container h4{
+       color: rgb(15, 109, 35);
+        text-transform: capitalize;
+}
+.costum_control {
+    margin: 0.2rem 0 0 1rem;
+}
+
+.costum_control li{
+    margin: 0.1rem 0 ;
+}
+
+.costum_control label{
+  cursor: pointer; 
+    
+font-size: 14px;
+font-weight: 500;
+}
+.container input {
+    margin: 0 8px -4px 0;
+  width: 0.5rem; 
+  height: 0.5rem;
+  border: 2px solid  rgb(15, 109, 35);
+  appearance: none; 
+  border-radius: 3px; 
+  padding: 0.4rem; 
+  cursor: pointer; 
+
+}
+.container input:checked{
+    background-color: rgb(15, 109, 35);
+}
+.container input:checked::before {
+  position: absolute;
+  content: '\2713'; /* Unicode checkmark character */
+  color: white;
+
+  margin: -9px 0 0 -5px   ;
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    margin: 0.75rem 0;
+  }
+
+  .costum_control {
+    margin: 0.1rem 0 0 0.5rem;
+  }
+
+  .costum_control li {
+    margin: 0.05rem 0;
+  }
+
+  .costum_control label {
+    font-size: 12px;
+  }
+
+  .container input {
+    margin: 0 4px -2px 0;
+    width: 0.25rem;
+    height: 0.25rem;
+    padding: 0.2rem;
+  }
+}

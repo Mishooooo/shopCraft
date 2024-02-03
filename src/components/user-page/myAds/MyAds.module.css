@@ -1,0 +1,21 @@
+.noProduct {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+
+}
+
+.noProduct h2 {
+  color: #000;
+  font-size: 24px;
+}
+
+.noProduct p {
+    margin: 1rem 0; 
+  color: #666;
+}
+
+.noProduct a {
+  color: rgb(56, 113, 56);
+  text-decoration: none;
+}

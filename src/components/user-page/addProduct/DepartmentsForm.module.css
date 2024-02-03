@@ -1,0 +1,69 @@
+
+.container h2 {
+    font-size: 20px;
+    color: #333;
+}
+.container select,
+.container option{
+background-color: transparent;
+}
+.departmentSelect {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.departmentSelect option {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.departments p {
+  margin: 1rem  0;
+      transition: 0.1s;
+}
+
+/* .container button {
+  margin-left: 1rem;
+} */
+
+
+.selectedDepartments {
+  display: flex;
+  margin-top: -0.5rem;
+ height: 2.5rem;
+}
+
+
+.departments,
+.arrowButton  {
+  display: flex; 
+  align-items: center;
+    cursor: pointer;
+     transition: 0.5s;
+}
+
+
+
+.departments:hover p, 
+ .departments:hover .arrowButton{
+   font-weight: bold;
+   color: rgb(80, 64, 64);
+}
+.arrowButton {
+  width: 1rem;
+}
+
+.goBackButton {
+  font-size: 1.5em;
+   color: rgb(39, 39, 39);
+  cursor: pointer;  margin-right: 5px ;
+  transition: 0.3s;
+}
+
+.goBackButton:hover {
+  color: rgb(191, 191, 191);
+ 
+}

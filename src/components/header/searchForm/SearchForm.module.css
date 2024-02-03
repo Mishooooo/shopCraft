@@ -1,0 +1,44 @@
+.search {
+  background-color: #fff;
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+height: 3rem;
+  transition: all 0.3s;
+
+}
+
+.search:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 0.7rem 3rem rgba(102, 102, 102, 0.08);
+}
+
+.search__field {
+  border: none;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.3em;
+    width: 35vh;
+}
+
+.search__field:focus {
+  outline: none;
+}
+
+.search__field::placeholder {
+  color: #ccc;
+}
+
+.search svg{
+color: #555454;
+  padding: 0 1rem;
+  width: 1.5rem;
+}
+
+.authPage {
+  display: none;
+}
+
+
+

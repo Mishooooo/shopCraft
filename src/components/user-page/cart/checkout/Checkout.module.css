@@ -1,0 +1,62 @@
+.checkoutContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 0.25rem;
+  padding: 1.2rem;
+  border: 1px solid #e2e8f0;
+  width: 20%;
+  height: 8rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+.freeShipping {
+  color: #3b82f6;
+}
+
+.checkoutContainer hr {
+  width: 100%;
+  /* height: 1px; */
+  background-color: #cfd6dd;
+  margin: 1rem 0;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+  .checkoutContainer {
+    width: 15%;
+    height: 5rem;
+  }
+
+  .sectionTitle {
+    font-size: .8em;
+  }
+
+  .checkoutContainer hr {
+    margin: 0.8rem 0;
+  }
+
+  .totalRow {
+    font-size: 0.6em;
+  }
+}

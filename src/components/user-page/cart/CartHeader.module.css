@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 3.5rem;
+  border-bottom: 1px solid black;
+}
+
+.container button,
+.container div {
+  display: flex;
+  align-items: center;
+ gap: 7px;
+ cursor: pointer;
+ padding: 0 1.8rem;
+}
+.trashIcon {
+  width: 24px; 
+  height: 24px; 
+}

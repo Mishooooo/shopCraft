@@ -1,0 +1,19 @@
+.feed_container {
+  display: flex;
+  justify-content: center;
+  /* width: 100%; */
+}
+
+.container {
+  padding: 0 10vh;
+}
+
+.post_container {
+  margin-left: 5vh;
+  width: 80%;
+}
+.posts{
+   display: grid;
+  grid-template-columns: repeat(4, 2fr); /* Four columns with equal width */
+  gap: 1.2rem; /* Gap between grid items */
+}

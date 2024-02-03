@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+   min-width: 100%;
+    
+}
+
+.container div{
+    width: 11rem;
+      display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.navigation {
+    display: flex;
+    font-weight: 500;
+}
+
+.displayIcon{
+  width: 2rem;
+         color: rgb(17, 100, 17);
+
+  cursor: pointer
+}
+
+.container a{
+   color:#0d0d0da9;  
+
+}
+
+.container a:hover {
+      transition: all 0.2s;
+    color: rgba(104, 104, 104, 0.476);
+}
+.container img:hover {
+    transition: all 0.5s;
+  filter: brightness(800%); /* Increase brightness to change color on hover */
+
+}
+
+.arrow {
+    margin: 4px 3px 0 3px;
+    font-size: 10px;
+}
+
+.ads_quantity {
+    margin-left: 3rem;
+    color: green;
+}
+
+
+@media (max-width: 768px) {
+.displayIcon{
+  display: none;
+}
+}

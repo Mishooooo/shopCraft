@@ -1,0 +1,71 @@
+.department {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  flex-wrap: wrap; 
+  max-width: 100%; 
+  text-align: center;
+}
+
+.department li {
+  display: block;
+  max-width: 12rem; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+.department,
+.department button {
+  cursor: pointer;
+  color: rgb(15, 109, 35);
+  font-size: 0.9em;
+  text-transform: capitalize;
+  transition: 0.2s all linear;
+}
+
+.forNavigation li,
+.forNavigation button {
+  font-weight: 500;
+  color: rgb(88, 88, 88);
+  font-size: 1em;
+}
+
+.department a:hover,
+.department button:hover {
+  opacity: 0.6;
+}
+
+.department span {
+  margin-left: 5px;
+}
+
+.HomeIcon {
+  width: 1.2rem;
+}
+
+.rightIcon {
+  width: 0.8rem;
+}
+
+/* Responsiveness for screens with max-width of 600px */
+@media (max-width: 600px) {
+
+  .department,
+  .department button {
+    font-size: 0.7em;
+  }
+
+  .forNavigation li,
+  .forNavigation button {
+    font-size: 0.8em;
+  }
+
+  .HomeIcon {
+    width: 1rem;
+  }
+
+  .rightIcon {
+    width: 0.6rem;
+  }
+}

@@ -1,0 +1,20 @@
+.emptyFavorites {
+  text-align: center;
+  padding: 20px;
+
+}
+
+.emptyFavorites h2 {
+  color: #000;
+  font-size: 24px;
+}
+
+.emptyFavorites p {
+  color: #667;
+  font-size: 18px;
+  margin: 1rem 0;
+}
+
+.emptyFavorites a {
+  color: rgb(56, 113, 56);
+}

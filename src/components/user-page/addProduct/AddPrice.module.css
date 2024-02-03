@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+
+}
+.container h2{
+  font-size: 20px;
+  color: #333;
+  margin-right: 2rem;
+}
+.container input{
+ background-color: transparent;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  height: 3rem;
+  border: 4px #ffb3003b solid;
+
+  border-radius: 5px;
+  padding-left: 0.5rem;
+  width: 9rem;
+}
+
+.price span{
+  font-size: 1.2em;
+  margin-top: 1px;
+}
+.priceValue {
+  display: flex;
+  justify-content: space-between;
+}
+.priceInCents input,
+.priceInDollars{
+  border: none;  
+  font-weight: bold;
+}
+.priceInCents {
+    display: flex;
+    align-items: center;
+    color: #5e5e5e;    
+}
+.priceInCents span {
+  margin-bottom: 5px;
+}
+.priceInCents input{
+ color: #5e5e5e;
+    width: 1.9;
+
+      font-size: 14px;
+}
+
+.priceInDollars  {
+
+ 
+margin-left: 0.6rem;
+ color: #4a4a4a;
+  font-size: 1.4em;
+
+}
+
+.priceInDollars::placeholder {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+

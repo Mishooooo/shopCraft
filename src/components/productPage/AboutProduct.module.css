@@ -1,0 +1,294 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 3rem;
+  width: 90%;
+  height: 100%;
+}
+.container hr {
+  width: 100%;
+  border: 1px solid rgba(179, 179, 179, 0.61);
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+.details p {
+  color: #747474;
+  font-size: 14px;
+}
+
+.details div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 1.2rem;
+  background: #679759;
+  color: white;
+  font-size: 0.8em;
+  border-radius: 1rem;
+}
+
+.title-price {
+  display: flex;
+  align-items: center;
+}
+
+
+.price {
+  padding: 0 1rem;
+  height: 2.5rem;
+  border-radius: 1em;
+  background-color: rgb(255, 102, 0);
+  text-align: center;
+  margin: 0.5rem 1rem;
+}
+.price span {
+  font-size: 2em;
+  color: rgb(240, 240, 240);
+}
+
+.description {
+  margin: 2rem 0;
+  height: 8rem;
+}
+.description p {
+  margin: 0.2rem 0 0 0.7rem;
+  color: rgba(0, 0, 0, 0.573);
+}
+
+.description label {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.about-user {
+  border-radius: 0.3rem;
+  border: 1.5px solid rgba(179, 179, 179, 0.61);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 6rem;
+  margin-bottom: 3rem;
+}
+
+.about-user img {
+  width: 2.5rem;
+  border-radius: 3px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin: 3px;
+}
+.user-info p,
+.connection-info p {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  color: #212529;
+  font-size: 1em;
+}
+
+.connection-info svg {
+  width: 1.5rem;
+  fill: rgb(62, 131, 62);
+  color: rgb(235, 232, 232);
+}
+
+.connection-info div,
+.connection-info a {
+  display: flex;
+  border: 1.5px solid rgba(179, 179, 179, 0.61);
+  border-radius: 8px;
+  padding: 7px;
+  margin: 3px;
+}
+
+.user-addvertisments {
+  background-color: rgba(0, 128, 0, 0.615);
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+}
+.user-addvertisments {
+  color: rgba(219, 219, 219, 0.886);
+  font-size: 14px;
+}
+
+.addToPageButtons {
+  display: flex;
+  justify-content: space-around;
+  width: 8rem;
+}
+.addToPageButtons svg {
+  width: 1.5rem;
+}
+
+.addToPageButtons button {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #679e73, #8eaa94);
+  color: #003366de;
+  cursor: pointer;
+  padding: 0.2rem 0.8rem;
+  border-radius: 4rem;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.activedButton svg {
+  fill: rgb(207, 74, 74);
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    margin-left: 1rem;
+    width: 70%;
+  }
+
+  .details p {
+    font-size: 10px;
+  }
+
+  .details div {
+    width: 3rem;
+    height: 1rem;
+
+    font-size: 10px;
+  }
+.title-price h1{
+  font-size: 20px;
+}
+  .price {
+    padding: 0 0.5rem;
+    height: 2rem;
+    margin: 0.3rem 0.5rem;
+  }
+  .price span {
+    font-size: 1.5em;
+  }
+
+  .description {
+    margin: 1rem 0;
+    height: 6rem;
+  }
+  .description p {
+    margin: 2px 0 0 6px;
+
+  }
+
+  .description label {
+    font-size: 0.6em;
+  }
+
+
+.description p {
+ font-size: 8px;
+}
+
+
+  .about-user {
+    height: 4rem;
+    margin-bottom: 2rem;
+  }
+  .user-info {
+    margin: 2px;
+  }
+
+  .about-user img {
+    width: 1.3rem;
+  }
+  .user-info p,
+  .connection-info p {
+    margin-left: 0.2rem;
+
+    font-size: 8px;
+  }
+
+  .connection-info svg {
+    width: 1rem;
+  }
+
+  .connection-info div,
+  .connection-info a {
+    padding: 5px;
+    margin: 2px;
+  }
+
+  .user-addvertisments {
+    padding: 5px;
+  }
+  .user-addvertisments {
+    font-size: 8px;
+  }
+
+  .addToPageButtons {
+    width: 5rem;
+  }
+  .addToPageButtons svg {
+    width: 1rem;
+  }
+
+  .addToPageButtons button {
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    margin-left: 0.2rem;
+  }
+
+  .details p {
+    font-size: 8px;
+  }
+
+  .details div {
+    width: 2.5rem;
+    height: 0.8rem;
+
+    font-size: 8px;
+  }
+
+  .price {
+    padding: 0 0.3rem;
+    height: 1.8rem;
+    margin: 0.3rem 0.4rem;
+  }
+  .price span {
+    font-size: 1.2em;
+  }
+
+  .about-user {
+    height: 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-user img {
+    width: 1rem;
+  }
+  .user-info p,
+  .connection-info div,
+  .connection-info a {
+    padding: 4px;
+    margin: 1px;
+  }
+
+  .user-addvertisments {
+    padding: 4px;
+  }
+  .user-addvertisments {
+    font-size: 7px;
+  }
+
+  .addToPageButtons {
+    width: 4rem;
+  }
+
+  .addToPageButtons button {
+    padding: 0.2rem 0.3rem;
+  }
+}

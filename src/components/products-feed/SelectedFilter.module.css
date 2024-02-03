@@ -1,0 +1,43 @@
+.container {
+  display: grid;
+  grid-template-columns:  repeat(auto-fill, minmax(10rem, 1fr));
+
+  gap: 1.5rem; /* Gap between grid items */
+  padding: 0 0.4rem 1.5rem 0.4rem;
+  width: 100%;
+
+}
+
+.selected_filter {
+  color: #d9e1dc;
+  background-color: #007b44;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  padding: 0 3px;
+  height: 2.3rem;
+  border: 2px solid rgb(243, 240, 240);
+  overflow: hidden;
+}
+.selected_filter p{
+  overflow: hidden;
+}
+
+.container svg {
+      position: absolute;
+  color: #ccd5d0;
+  width: 1.1rem;
+  margin-left: 2px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.container svg:hover {
+  color: #ffffff;
+  width: 1.3rem;
+}
+
+.selected_filter p {
+  margin: auto;
+}

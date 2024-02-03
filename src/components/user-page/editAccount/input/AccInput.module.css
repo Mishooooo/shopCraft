@@ -1,0 +1,37 @@
+.container div {
+  display: flex;
+}
+.inputLabel {
+  text-transform: capitalize;
+  display: flex;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0 -2.5rem 0 0;
+}
+
+.input {
+  border: none;
+  border-radius: 10px;
+  min-width: 65%;
+}
+.activeInput {
+  border: 1.5px solid rgb(99, 122, 100);
+}
+
+.error {
+  color: #a60000;
+  margin: 4px;
+}
+
+@media (max-width: 500px) {
+  .inputLabel {
+    font-size: 10px;
+    margin: 0 -2rem 0 0;
+  }
+
+  .input {
+    border: none;
+    border-radius: 10px;
+    min-width: 50%;
+  }
+}

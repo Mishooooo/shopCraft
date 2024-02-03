@@ -1,0 +1,32 @@
+.button {
+  cursor: pointer;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  border: 1.5px solid #ccc;
+
+  border-radius: 10px;
+  color: rgb(40, 40, 40);
+
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+  padding: 0.7rem 1.5rem;
+
+  transition: all 0.1s ease-in-out;
+}
+
+.button img {
+  margin-right: 3rem;
+}
+
+.button:active {
+  background-color: #efefef;
+}
+
+
+
+.providerName {
+    text-transform: capitalize;
+}

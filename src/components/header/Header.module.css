@@ -1,0 +1,21 @@
+.header {
+  background-color: #060029;
+}
+.container {
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+justify-content: space-between;
+  padding: 1rem 4vh;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo, .navigation {
+ margin: 0;
+
+}

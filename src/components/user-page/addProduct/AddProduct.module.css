@@ -1,0 +1,16 @@
+.publishProduct {
+   
+  width: 100%;
+background-color: orange;
+color: white;
+border-radius: 1rem;
+font-size: 20px;
+height: 3rem;
+cursor: pointer;
+}
+
+
+.error {
+    color: #a60000;
+    margin: 4px;
+}

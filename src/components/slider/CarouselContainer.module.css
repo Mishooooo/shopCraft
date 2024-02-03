@@ -1,0 +1,80 @@
+.arrowButtonLeft,
+.arrowButtonRight {
+  position: absolute;
+  z-index: 10;
+  top: calc(40%);
+  border-radius: 50%;
+  background: #2f2f2fb8;
+
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  color: rgb(214, 210, 210);
+   width: 1.8rem;
+   height: 1.8rem;
+
+
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.arrowButtonLeft svg,
+.arrowButtonRight svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.suggestionsArrowButton {
+ 
+  background: none;
+  opacity: 1;
+}
+
+.suggestionsArrowButton svg {
+  width: auto;
+  height: auto;
+  color: rgb(88, 88, 88);
+
+}
+
+.carouselContainer:hover .arrowButtonRight,
+.carouselContainer:hover .arrowButtonLeft {
+  opacity: 1;
+}
+
+.arrowButtonLeft {
+  left: 2px;
+}
+
+.arrowButtonRight {
+  right: 2px;
+}
+
+.feedItems {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0 5vh;
+}
+
+.feedItems a{
+margin: .5rem;
+}
+
+
+@media (max-width: 1024px) {
+  .feedItems a:nth-last-child(-n+1){
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .feedItems a:nth-last-child(-n+2){
+    display: none;
+  }
+}
+@media (max-width: 680px) {
+  .feedItems a:nth-last-child(-n+3){
+    display: none;
+  }
+}

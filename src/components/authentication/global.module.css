@@ -1,0 +1,154 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  margin: 6vh auto;
+  width: 30rem;
+
+}
+
+.formContainer {
+  width: 26rem;
+  background-color: #ffffff;
+
+  border-radius: 3%;
+  box-shadow: -1px 1px 10px #d3d3d3;
+  padding: .8rem 2rem;
+
+}
+
+.signHeader {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+/* .signButton {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+} */
+
+
+.inputLabel {
+  display: flex;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 7px 0 5px 0;
+}
+.inputLabel svg {
+  width: 1rem;
+}
+.inputLabel label {
+  text-transform: capitalize;
+  margin-left: 2px;
+  color: rgb(41, 41, 41);
+}
+
+.input {
+  position: relative;
+  padding: 0.7rem;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  width: calc(100% - 1.4rem);
+}
+
+
+.signButton, 
+.registerButton{
+  text-align: center;
+    margin: 8px 0 1rem 0;
+  width: 100%;
+  background-color: rgb(57, 98, 167);
+ color: #e2e2e2;
+  font-size: 15px;
+  padding: 0.8rem 0;
+  border: 1px solid #727272;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.signButton:hover {
+  background-color: rgb(58, 88, 141);
+}
+.signButton:active {
+  background-color: rgb(37, 72, 132);
+}
+
+.orLine, 
+.newLine {
+  border: 0;
+  border-top: 1px solid #ccc;
+  display: block;
+  overflow: visible;
+  text-align: center; /* Center the "or" text horizontally */
+  
+}
+
+.formContainer hr::before,
+.newLine::before  {
+  background-color: #ffffff;
+
+  color: #888;
+  content: "or";
+  padding: 0 0.5rem;
+  position: relative;
+  top: -0.7rem;
+  z-index: 1; /* Ensure the "or" text is above the line */
+}
+.newLine {
+    margin-top:   1.5rem;
+}
+.newLine::before {
+  background-color: rgb(230, 231, 233);  
+  color: #484848;
+  content: "New to shopCraft?";
+  padding: 0 2rem;
+
+}
+
+.formContainer p{
+ font-size: 14px;
+}
+.formContainer a {
+  color: rgba(0, 0, 255, 0.864);
+  margin-top: 2rem;
+  font-size: 14px;
+}
+
+.registerButton{
+  background-color: rgb(60, 118, 70);
+margin-top: 0;
+color: #e2e2e2;
+
+}
+
+.registerButton:hover {
+  background-color: rgba(60, 118, 70, 0.922);
+}
+.registerButton:active {
+  background-color: rgba(60, 118, 70, 0.931);
+
+}
+
+.errorMessage {
+    color: rgb(163, 65, 65);
+}
+
+
+@media  (max-width: 768px) {
+.main {
+   
+  width: 20rem;
+
+}
+
+.formContainer {
+  width: 16rem;
+ 
+}
+
+  
+}
+

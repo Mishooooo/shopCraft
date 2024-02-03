@@ -1,0 +1,42 @@
+.container {
+  margin-top: 1rem;
+  width: 100%;
+
+}
+
+.container hr {
+  border: 1px solid rgba(179, 179, 179, 0.61); 
+  margin: 1rem 0;
+}
+
+.container button {
+  text-transform: capitalize;
+}
+
+.costum_control {
+  margin: 0.3rem 1rem;
+}
+
+.selectDepsList button{
+  cursor: pointer;
+  color: rgb(65, 65, 65);
+}
+
+/* Responrgb(95, 95, 95)ns with max-width of 600px */
+@media (max-width: 600px) {
+  .container {
+    margin-top: 0.5rem;
+  }
+
+  .container hr {
+    margin: 0.5rem 0;
+  }
+
+  .costum_control {
+    margin: 0.2rem 0.5rem;
+  }
+
+  .selectDepsList {
+    font-size: 0.8em;
+  }
+}

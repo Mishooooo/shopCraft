@@ -1,0 +1,11 @@
+.container {
+  margin: 0rem 4vh; 
+  padding: 1.5rem 2vh;
+   
+    background-color: rgba(255, 255, 255, 0.745);
+  border-radius: 3px;
+}
+.container h3 {
+  margin: 0 0 1rem 3rem;
+}
+
