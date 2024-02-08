@@ -2,7 +2,7 @@
 
 import NewPassowrdForm from "./NewPasswordForm";
 import classes from "./RecoverPassword.module.css";
-import style from "../global.module.css";
+import styles from "../global.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -27,15 +27,15 @@ const RecoverPassword = () => {
  
 
   return (
-    <main className={classes.main}>
+    <main className={styles.main}>
 
-    <div className={style.formContainer}>
+    <div className={styles.formContainer}>
       <button className={classes.goBack} onClick={handleGoBack}>
         <ArrowCircleLeftIcon />
       </button>
  
       <h2 className={classes.signHeader}>Recover password</h2>
-      <p style={{ color: "red" }}>{errorMessage}</p>
+      <p styles={{ color: "red" }}>{errorMessage}</p>
 
       {verifiedEmail ? (
         <NewPassowrdForm

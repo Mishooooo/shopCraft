@@ -34,15 +34,10 @@ const SendEmailForm = ({ setVerifiedEmail, setErrorMessage }) => {
 
     setRecieveButtonText("Sending email...");
 
-    try {
       const response = await fetch("/api/auth/recover-password", {
         method: "POST",
         body: JSON.stringify({ email: values.email }),
       });
-
-      if (!response.ok || !(response.status >= 200 && response.status < 300)) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
 
       const resData = await response.json();
 
@@ -58,9 +53,7 @@ const SendEmailForm = ({ setVerifiedEmail, setErrorMessage }) => {
       if (resData.error) return setErrorMessage(resData.error);
       setActiveTime(180); // Start the timer when sending email code
       setUserEmail(values.email);
-    } catch (error) {
-      console.error("Error: ", error);
-    }
+
   };
 
   const handleVerificationCode = async (e) => {

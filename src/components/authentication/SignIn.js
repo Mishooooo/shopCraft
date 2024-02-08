@@ -43,7 +43,7 @@ const SignIn = () => {
               {status && <div className={classes.errorMessage}>{status}</div>}
               <EmailInput />
               <PasswordInput />
-              <Link href={"./signin/recover-password"}>Forgot password?</Link>
+              <Link href={"./auth/signin/recover-password"}>Forgot password?</Link>
 
               <button
                 type="submit"
