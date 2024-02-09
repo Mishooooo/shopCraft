@@ -18,11 +18,15 @@ export async function GET() {
 
     const userId = session.user.id;
 
-    const userConversations = await Conversation.find({ members: userId })
-      .populate({
-        path: "members",
-        select: "_id userName image",
-      })
+    const userConversations = await Conversation.find({
+      members: { $in: [userId] },
+    })
+      .populate([
+        {
+          path: "members",
+          select: "_id userName image",
+        },
+      ])
       .sort({ "messages.createdAt": -1 })
       .exec();
 

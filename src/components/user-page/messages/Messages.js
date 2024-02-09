@@ -32,6 +32,7 @@ export default function Messages() {
       </div>
     );
 
+
      const userId = session.data.id;
 
   const handleSearchedUsers = (val) => {
