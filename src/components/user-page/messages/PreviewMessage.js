@@ -11,7 +11,7 @@ const PreviewMessage = ({ userId, message, user}) => {
    if (message?.members?.length === 2) {
      const otherPersonIndex = userId === message.members[0]._id ? 1 : 0;
      person = message.members[otherPersonIndex];
-     messageContent = `${otherPersonIndex === 1 ? person.userName : "you"}: ${
+     messageContent = `${otherPersonIndex === 0 ? person.userName : "you"}: ${
        message.messages[message.messages.length - 1].message   // last message
      }`;
    }
