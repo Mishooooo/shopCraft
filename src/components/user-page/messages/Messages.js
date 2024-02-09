@@ -33,7 +33,7 @@ export default function Messages() {
     );
 
 
-     const userId = session.data.id;
+     const userId = session.data.user.id;
 
   const handleSearchedUsers = (val) => {
     setFocusInbox(false); // So 'others' button will automatically be focused

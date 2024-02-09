@@ -20,8 +20,7 @@ export default function MessageContainer({ userId }) {
   const { data, error } = useSWR(apiUrl, fetchFunction);
 
 if (error) throw error;
-
-  if (!data) return <Spinner size={100} />;
+  if (!data || !userId) return <Spinner size={100} />;
 
   if (!messageContent ) setMessageContent(data.messages);
 
@@ -56,7 +55,6 @@ if (error) throw error;
           createdAt: Date.now(),
         })
       );
-
       actions.resetForm();
 
       //  In order to Update inbox messages.
@@ -83,9 +81,9 @@ if (error) throw error;
           <li
             key={index}
             className={
-              userId === message.receiver // check the role
-                ? classes.users_message
-                : classes.others_message
+              userId !== message.sender // check the role
+                ? classes.others_message
+                : classes.users_message
             }
           >
             <p className={classes.message_text}>{message.message}</p>

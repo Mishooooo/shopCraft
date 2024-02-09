@@ -4,7 +4,6 @@ import timeAgoString from "@/lib/timeAgoString";
 
 const PreviewMessage = ({ userId, message, user}) => {
    const router = useRouter();
-   console.log("message: ", message)
 
    let person = {};
    let messageContent;
