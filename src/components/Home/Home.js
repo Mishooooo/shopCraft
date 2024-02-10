@@ -57,7 +57,7 @@ export default function Home() {
       </div>
       <Recomendations
         header="Recently added"
-        suggestionsDep={["sports and fitness", "exercise equipment"]}
+        suggestionsDep={[]}
       />
     </main>
   );

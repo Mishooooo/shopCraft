@@ -1,8 +1,7 @@
 import { connectDB } from "@/db/connect";
 import Product from "@/models/Product";
 import { NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions } from "../auth/[...nextauth]/route";
+
 
 connectDB();
 
@@ -11,16 +10,10 @@ export async function GET(req) {
     const searchParams = req.nextUrl.searchParams;
 
     const sortId = searchParams.get("sortOption");
+    const userId = searchParams.get("userId");
 
-    const session = await getServerSession(authOptions);
 
-    if (!session?.user)
-      return NextResponse.json(
-        { error: "unautheticated user" },
-        { status: 401 }
-      );
 
-    const userId = session.user.id;
 
     let sortOption;
     if (sortId === "1" || !sortId) {
