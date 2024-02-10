@@ -20,7 +20,10 @@ const SearchForm = () => {
     searchValueRef.current = event.target.value;
 
     const delaySearch = setTimeout(() => {
-      if (!searchValueRef.current) return deleteParam("search-value");
+      if (!searchValueRef.current) {
+        searchValueRef.current = "";
+       return deleteParam("search-value");
+      }
       if (searchValue || pathname.startsWith("/products-feed")){
         // this approach avoids reseting other searchParams 
         return setQueryParam("search-value", searchValueRef.current);
