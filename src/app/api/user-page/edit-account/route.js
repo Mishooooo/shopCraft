@@ -48,6 +48,7 @@ export async function PUT(req) {
     const userId = session.user.id;
     // Parse the incoming JSON request
     const {
+      image,
       new_password,
       confirm_password,
       email_adress,
@@ -68,7 +69,6 @@ try {
     });
   }
 } catch (error) {
-  console.log(error);
   return NextResponse.json({ error: "validation error" }, { status: 400 });
 }
 
@@ -87,6 +87,7 @@ try {
     if (!editOnlyPhone) {
       user.userName = user_name;
       user.email = email_adress;
+      user.image = image;
       if (new_password) {
         // Hash the new password
         const hashedPassword = await bcrypt.hash(request.password, 12);
