@@ -2,7 +2,6 @@ import useCustumSearchParam from "@/lib/useCustumSearchParam";
 import classes from "./CurrentDepartment.module.css";
 import { ChevronRightIcon, HomeIcon } from "@heroicons/react/outline";
 import { useSearchParams } from "next/navigation";
-import Link from "next/link";
 
 export default function CurrentDepartment() {
   const { setQueryParam, deleteParam } = useCustumSearchParam();

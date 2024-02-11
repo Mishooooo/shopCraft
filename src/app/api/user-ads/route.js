@@ -13,8 +13,6 @@ export async function GET(req) {
     const userId = searchParams.get("userId");
 
 
-
-
     let sortOption;
     if (sortId === "1" || !sortId) {
       sortOption = { createdAt: -1 }; // Sort by date in descending order

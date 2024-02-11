@@ -34,6 +34,7 @@ export default function SelectedFilter() {
       return delSelectedFilter(condition, 'condition');
     }
 
+   setQueryParam(deleteSearchParam, "");
    deleteParam(deleteSearchParam);
   };
 

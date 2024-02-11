@@ -12,7 +12,6 @@ import {
 
 import { useDispatch, useSelector } from "react-redux";
 
-
 import { useEffect } from "react";
 import { addToCart, resetCart } from "@/store/cartSlice";
 import { addToFavorites, resetFavorites } from "@/store/favoritesSlice";

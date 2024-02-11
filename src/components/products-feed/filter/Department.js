@@ -1,6 +1,6 @@
 "use client";
 import classes from "./Department.module.css";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { departments } from "@/lib/config";
 import { useState, useEffect } from "react";
 import useCustumSearchParam from "@/lib/useCustumSearchParam";

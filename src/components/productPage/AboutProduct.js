@@ -26,8 +26,7 @@ export default function AboutProduct({ data }) {
  const { favorites, cart } = useSelector(selectFavoritesAndCart);
 
 
-  if (!data) return <Spinner size={150} />;
-
+  if (!data) return <Spinner size={150} />; 
  
 
   const inFavorites = favorites.some((item) => item?._id === data._id);
