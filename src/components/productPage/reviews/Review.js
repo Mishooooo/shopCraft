@@ -7,6 +7,7 @@ import { useSession } from "next-auth/react";
 import AddReview from "./AddReview";
 import DeleteReview from "./DeleteReview";
 import AddReviewReact from "./AddReviewReact";
+import Link from "next/link";
 
 const RATING_VALUES = [5, 4, 3, 2, 1];
 
@@ -113,7 +114,9 @@ export default function Review({ review }) {
       {session.status === "authenticated" ? (
         <AddReview session={session} addReview={addReview} />
       ) : (
-        <button>login and review</button>
+        <Link href="/auth/signin">
+          <button>login and review</button>
+        </Link>
       )}
     </div>
   );

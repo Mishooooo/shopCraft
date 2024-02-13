@@ -13,8 +13,7 @@ export default function SelectedFilter() {
   const priceParam = searchParams.get("price");
   const conditionParam = searchParams.get("condition");
   const searchValue = searchParams.get("search-value");
-
-
+  
   // Parse parameters into arrays
   const price = priceParam ? priceParam.split("-") : [];
   const condition = conditionParam ? conditionParam.split(".") : [];
@@ -39,7 +38,6 @@ export default function SelectedFilter() {
   };
 
   const selectedFilters = condition; 
-
 
   return (
     <ul className={classes.container}>

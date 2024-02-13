@@ -6,7 +6,7 @@ export default function useCustumSearchParam() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-     const params = new URLSearchParams(searchParams);
+    const params = new URLSearchParams(searchParams);
      
   const createQueryString = useCallback(
     (name, value) => {
@@ -14,7 +14,7 @@ export default function useCustumSearchParam() {
       params.set(name, value);
       return params.toString();
     },
-    []
+    [params, pathname]
   );
 
   const setQueryParam = (paramName, paramValue) => {
