@@ -7,7 +7,6 @@
   color: #c5c5c5;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
   justify-items: center;
   font-size: 13px;
 }
@@ -45,11 +44,6 @@
   margin-right: 6px;
 }
 
-.portfalio,
-.sourceCode {
-  box-shadow: 0 0px 20px rgba(75, 75, 75, 0.15);
-  color: #dbd9d9;
-}
 
 .copyright {
   text-align: center;

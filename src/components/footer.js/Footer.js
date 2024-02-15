@@ -9,20 +9,13 @@ export default function Footer() {
     <footer className={classes.footer}>
       <ScrollToTop />
       <div className={classes.container}>
-        <div>
-          <div className={classes.portfalio}>
-            <Link target="blank" href="https://github.com/Mishooooo/portfalio">
-              <BriefcaseIcon />
-              See portfailio
-            </Link>
-          </div>
+   
           <div className={classes.sourceCode}>
             <Link target="blank" href="https://github.com/Mishooooo/shopCraft">
               <img src="/images/icons/github.png" alt="icon" />
               Source code
             </Link>
           </div>
-        </div>
 
         <div>
           <div>
@@ -30,7 +23,10 @@ export default function Footer() {
             <hr />
             <ul className={classes.socialMedia}>
               <li>
-                <Link target="blank" href="/">
+                <Link
+                  target="blank"
+                  href="https://www.linkedin.com/in/misho-sisvadze-932612254/"
+                >
                   <img src="/images/icons/linkedin.png" alt="icon" />
                   Linkedin
                 </Link>
