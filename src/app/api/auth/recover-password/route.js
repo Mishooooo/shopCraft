@@ -94,7 +94,19 @@ export async function POST(req) {
     };
 
     const transport = await transporter();
-    transport.sendMail(mailOptions);
+   transporter.sendMail(mailOptions, (err, info) => {
+     if (err) {
+       // Log the error
+       console.error("Error occurred: " + err.message);
+       // Check the response
+       console.log("Server response: " + err.response);
+       // Check the OAuth error
+       console.log("OAuth error: " + err.oauthError);
+     } else {
+       // Log the success
+       console.log("Email sent: " + info.response);
+     }
+   });
 
     return NextResponse.json({ success: "The email was sent" });
   } catch (error) {
