@@ -4,9 +4,7 @@ import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../../auth/[...nextauth]/route";
-import editAccountSchema, {
-  phoneSchema,
-} from "@/validationSchemas/editAccount";
+import editAccountSchema from "@/validationSchemas/editAccount";
 
 connectDB();
 
@@ -36,7 +34,6 @@ export async function GET() {
 export async function PUT(req) {
   try {
     const searchParams = req.nextUrl.searchParams;
-    const editOnlyPhone = searchParams.get("editOnlyPhone");
     const givenUserId = searchParams.get("userId");
     const session = await getServerSession(authOptions);
 
@@ -57,21 +54,20 @@ export async function PUT(req) {
       phone_number,
     } = await req.json();
 
-try {
-  if (editOnlyPhone) {
-    await phoneSchema.validate({ phone_number });
-  } else {
-    await editAccountSchema.validate({
-      confirm_password: confirm_password !== "" ? confirm_password : undefined,
-      new_password: new_password !== "" ? new_password : undefined,
-      email_adress,
-      user_name,
-      phone_number,
-    });
-  }
-} catch (error) {
-  return NextResponse.json({ error: "validation error" }, { status: 400 });
-}
+    try {
+      const validationData = {
+        confirm_password: confirm_password !== "" ? confirm_password : undefined,
+        new_password,
+        email_adress,
+        user_name,
+        phone_number
+      };
+
+      await editAccountSchema.validate(validationData);
+
+    } catch (error) {
+      return NextResponse.json({ error: "validation error" }, { status: 400 });
+    }
 
     // Find the user in the database by ID
     const user = await User.findById(userId);
@@ -81,21 +77,15 @@ try {
       return NextResponse.json({ error: "User not found" }, { status: 404 });
     }
 
-
-    user.phone = phone_number; // phone number is always available
-
-    // Update user data
-    if (!editOnlyPhone) {
-      user.userName = user_name;
-      user.email = email_adress;
-      user.image = image;
-      if (new_password) {
-        // Hash the new password
-        const hashedPassword = await bcrypt.hash(request.password, 12);
-        user.password = hashedPassword;
-      }
-    } 
-   
+    if (new_password && new_password !== "") {
+      // Hash the new password
+      const hashedPassword = await bcrypt.hash(new_password, 12);
+      user.password = hashedPassword;
+    }
+    if (phone_number) user.phone = phone_number;
+    if (user_name) user.userName = user_name;
+    if (email_adress) user.email = email_adress;
+    if (image) user.image = image;
 
     // Save the updated user data to the database
     await user.save();

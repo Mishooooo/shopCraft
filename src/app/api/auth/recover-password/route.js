@@ -24,7 +24,7 @@ const oAuth2Client = new google.auth.OAuth2(
 oAuth2Client.setCredentials({ refresh_token: MAILING_SERVICE_REFRESH_TOKEN });
 
 const transporter = async () => {
-  try {
+  
     const accessToken = await oAuth2Client.getAccessToken();
 
     return nodemailer.createTransport({
@@ -40,9 +40,7 @@ const transporter = async () => {
       host: "smtp.gmail.com",
       port: 465,
     });
-  } catch (error) {
-    console.log(error);
-  }
+
 };
 
 export async function POST(req) {

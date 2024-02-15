@@ -26,7 +26,7 @@ const NewPasswordForm = ({ setErrorMessage, verifiedEmail, router }) => {
         `/api/user-page/edit-account?userId=${verifiedEmail.userId}`,
         {
           method: "PUT",
-          body: JSON.stringify({ password: values.password }),
+          body: JSON.stringify({ new_password: values.password, confirm_password: values.confirm_password}),
         }
       );
 
@@ -57,7 +57,7 @@ const NewPasswordForm = ({ setErrorMessage, verifiedEmail, router }) => {
   };
 
   return (
-    <Formik onSubmit={onSubmitHandler} initialValues={{password: '', confirm_password: ''}}>
+    <Formik onSubmit={onSubmitHandler} initialValues={{password: "", confirm_password: ""}}>
       <Form>
         <PasswordInput />
 

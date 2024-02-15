@@ -5,7 +5,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useSession } from "next-auth/react";
 import { useDispatch } from "react-redux";
 import { setOverlay } from "@/store/overlaySlice";
-import { phoneSchema } from "@/validationSchemas/editAccount";
+import editAccountSchema from "@/validationSchemas/editAccount";
 
 export default function PhoneNumber() {
   const dispatch = useDispatch();
@@ -63,7 +63,7 @@ export default function PhoneNumber() {
           onSubmit={(values, actions) => {
             handleEditPhoneNumber(values, actions);
           }}
-          validationSchema={phoneSchema}
+          validationSchema={editAccountSchema}
           initialValues={{ phone_number: session?.user?.phone }}
         >
           <Form>
