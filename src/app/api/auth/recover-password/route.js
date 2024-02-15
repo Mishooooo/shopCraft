@@ -37,6 +37,11 @@ const transporter = async () => {
         refreshToken: MAILING_SERVICE_REFRESH_TOKEN,
         accessToken,
       },
+      host: "smtp-server",
+      port: 25,
+      tls: {
+        ciphers: "SSLv3", // Specify the desired TLS version
+      },
     });
   } catch (error) {
     console.log(error);
@@ -94,19 +99,7 @@ export async function POST(req) {
     };
 
     const transport = await transporter();
-   transport.sendMail(mailOptions, (err, info) => {
-     if (err) {
-       // Log the error
-       console.error("Error occurred: " + err.message);
-       // Check the response
-       console.log("Server response: " + err.response);
-       // Check the OAuth error
-       console.log("OAuth error: " + err.oauthError);
-     } else {
-       // Log the success
-       console.log("Email sent: " + info.response);
-     }
-   });
+   transport.sendMail(mailOptions);
 
     return NextResponse.json({ success: "The email was sent" });
   } catch (error) {
