@@ -6,8 +6,7 @@ import nodemailer from "nodemailer";
 
 connectDB();
 
-const REDIRECT_URI =
-  "https://shop-craft.vercel.app/auth/signin/recover-password";
+const REDIRECT_URI = "https://developers.google.com/oauthplayground";
 
 const {
   MAILING_SERVICE_CLIENT_ID,

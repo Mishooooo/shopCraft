@@ -37,15 +37,16 @@ export async function PUT(req) {
   try {
     const searchParams = req.nextUrl.searchParams;
     const editOnlyPhone = searchParams.get("editOnlyPhone");
+    const givenUserId = searchParams.get("userId");
     const session = await getServerSession(authOptions);
 
-    if (!session?.user)
+    if (!session?.user && !givenUserId)
       return NextResponse.json(
         { error: "unautheticated user" },
         { status: 401 }
       );
 
-    const userId = session.user.id;
+    const userId = session.user.id || givenUserId;
     // Parse the incoming JSON request
     const {
       image,
