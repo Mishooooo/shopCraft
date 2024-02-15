@@ -15,7 +15,7 @@ export default function AddReviewReact({ session, reviewId, revReacts }) {
     setLikesQuantity(alreadyLiked ? likesQuantity - 1 : likesQuantity + 1);
     setAlreadyLiked((prevState) => !prevState);
 
-    const response = await fetch(`/api/product/revviewId=${reviewId}`, {
+    const response = await fetch(`/api/product/review/reacts?reviewId=${reviewId}`, {
       method: "POST",
     });
     if (!response.ok || !(response.status >= 200 && response.status < 300)) {
