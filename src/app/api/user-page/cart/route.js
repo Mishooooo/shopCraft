@@ -28,25 +28,14 @@ export async function GET(request) {
         path: "userId",
         select: "_id userName phone",
       },
-    });
+    }).exec();
 
     if (!cartItems) {
       return NextResponse.json([]);
     }
-
-    const cart = cartItems.product.map((item) => {
-      const plainItem = item.toObject();
-      plainItem.imageUrl = plainItem.images[0];
-      delete plainItem.images;
-
-      return plainItem;
-    });
-
-    return NextResponse.json(cart);
+    return NextResponse.json(cartItems.product);
   } catch (error) {
-        console.log(error);
-
-    return NextResponse.json(
+      return NextResponse.json(
       { success: false, error: "Error occurred while getting cart data" },
       { status: 500 }
     );

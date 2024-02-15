@@ -40,7 +40,7 @@ const CartPost = ({
         }
       />
       <img
-        src={product.imageUrl}
+        src={product.images ? product.images[0] : ""}
         alt="Product"
         className={classes.productImg}
       />
