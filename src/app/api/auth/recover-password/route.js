@@ -98,7 +98,13 @@ export async function POST(req) {
     };
 
     const transport = await transporter();
-   transport.sendMail(mailOptions);
+   transport.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log(`Email sent: ${info.response}`);
+      }
+    });
 
     return NextResponse.json({ success: "The email was sent" });
   } catch (error) {
