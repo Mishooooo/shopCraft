@@ -46,7 +46,7 @@ export async function PUT(req) {
         { status: 401 }
       );
 
-    const userId = session.user.id || givenUserId;
+    const userId = session?.user?.id || givenUserId;
     // Parse the incoming JSON request
     const {
       image,
