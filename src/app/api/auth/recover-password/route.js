@@ -94,7 +94,7 @@ export async function POST(req) {
     };
 
     const transport = await transporter();
-   transporter.sendMail(mailOptions, (err, info) => {
+   transport.sendMail(mailOptions, (err, info) => {
      if (err) {
        // Log the error
        console.error("Error occurred: " + err.message);
