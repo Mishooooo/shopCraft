@@ -6,7 +6,8 @@ import nodemailer from "nodemailer";
 
 connectDB();
 
-const REDIRECT_URI = "https://developers.google.com/oauthplayground";
+const REDIRECT_URI =
+  "https://shop-craft.vercel.app/auth/signin/recover-password";
 
 const {
   MAILING_SERVICE_CLIENT_ID,
@@ -37,11 +38,7 @@ const transporter = async () => {
         refreshToken: MAILING_SERVICE_REFRESH_TOKEN,
         accessToken,
       },
-      host: "smtp.gmail.com",
-      port: 465, // Use port 465 for secure TLS
-      secure: true, // Set secure to true
-      debug: true,
-    });
+          });
   } catch (error) {
     console.log(error);
   }
@@ -98,13 +95,7 @@ export async function POST(req) {
     };
 
     const transport = await transporter();
-   transport.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log(`Email sent: ${info.response}`);
-      }
-    });
+   transport.sendMail(mailOptions);
 
     return NextResponse.json({ success: "The email was sent" });
   } catch (error) {
