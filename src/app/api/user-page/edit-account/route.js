@@ -56,11 +56,12 @@ export async function PUT(req) {
 
     try {
       const validationData = {
-        confirm_password: confirm_password !== "" ? confirm_password : undefined,
-        new_password,
+        confirm_password:
+          confirm_password !== "" ? confirm_password : undefined,
+        new_password: new_password !== "" ? new_password : undefined,
         email_adress,
         user_name,
-        phone_number
+        phone_number,
       };
 
       await editAccountSchema.validate(validationData);

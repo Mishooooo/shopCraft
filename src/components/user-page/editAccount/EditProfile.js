@@ -1,4 +1,4 @@
-import { PencilAltIcon, PencilIcon, TrashIcon } from "@heroicons/react/outline";
+import { PencilAltIcon, TrashIcon } from "@heroicons/react/outline";
 import classes from "./EditProfile.module.css";
 import AccInput from "./input/AccInput";
 import { useFormikContext } from "formik";
