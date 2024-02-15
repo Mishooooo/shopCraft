@@ -38,7 +38,9 @@ const transporter = async () => {
         accessToken,
       },
       host: "smtp.gmail.com",
-      port: 587,
+      port: 465, // Use port 465 for secure TLS
+      secure: true, // Set secure to true
+      debug: true,
     });
   } catch (error) {
     console.log(error);
