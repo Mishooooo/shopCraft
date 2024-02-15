@@ -37,11 +37,8 @@ const transporter = async () => {
         refreshToken: MAILING_SERVICE_REFRESH_TOKEN,
         accessToken,
       },
-      host: "smtp-server",
-      port: 25,
-      tls: {
-        ciphers: "SSLv3", // Specify the desired TLS version
-      },
+      host: "smtp.gmail.com",
+      port: 587,
     });
   } catch (error) {
     console.log(error);
