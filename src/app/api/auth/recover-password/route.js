@@ -38,7 +38,9 @@ const transporter = async () => {
         refreshToken: MAILING_SERVICE_REFRESH_TOKEN,
         accessToken,
       },
-          });
+      host: "smtp.gmail.com",
+      port: 465,
+    });
   } catch (error) {
     console.log(error);
   }
@@ -95,7 +97,7 @@ export async function POST(req) {
     };
 
     const transport = await transporter();
-   transport.sendMail(mailOptions);
+     await transport.sendMail(mailOptions);
 
     return NextResponse.json({ success: "The email was sent" });
   } catch (error) {
